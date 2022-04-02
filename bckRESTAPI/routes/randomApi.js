@@ -9,8 +9,6 @@ const {
     API_URL
 } = process.env;
 
-console.log(`API URL: ${API_URL}`);
-
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('index', { title: 'Express' });
@@ -18,7 +16,6 @@ router.get('/', function (req, res, next) {
 
 // @dev request Random API
 router.get('/randomApi', function (req, res, next) {
-    console.warn(API_URL);
     (async () => {
         await request(API_URL, function (error, response, body) {
             if (error) {
