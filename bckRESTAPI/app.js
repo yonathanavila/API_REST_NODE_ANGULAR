@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var restApi = require('./routes/restApi');
 var randomApi = require('./routes/randomApi');
+var firebaseApi = require('./routes/firebaseApi');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api', restApi);
 app.use('/randomApi', randomApi);
+app.use('/firebaseApi', firebaseApi);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
