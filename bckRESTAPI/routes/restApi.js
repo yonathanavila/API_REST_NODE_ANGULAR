@@ -61,4 +61,14 @@ router.put('/usuarios/:id', function (req, res, next) {
     }
 });
 
+// @dev Delete specific user
+router.delete('/usuarios/:id', function (req, res, next) {
+    if (req.params.id > usuarios.length - 1) {
+        res.send("No se encontro el usuario");
+    } else {
+        usuarios.splice(req.params.id, 1);
+        res.send("Usuario eliminado");
+    }
+});
+
 module.exports = router;
