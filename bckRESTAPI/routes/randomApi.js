@@ -29,5 +29,4 @@ router.get('/randomApi', function (req, res, next) {
     })();
 });
 
-
 module.exports = router;
